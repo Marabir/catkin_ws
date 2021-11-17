@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6c8f/fast"
+make[3]: Entering directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a6c8f.dir/build.make CMakeFiles/cmTC_a6c8f.dir/build
+make[4]: Entering directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a6c8f.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_a6c8f.dir/CheckSymbolExists.cxx.o -c /home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_a6c8f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6c8f.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a6c8f.dir/CheckSymbolExists.cxx.o  -o cmTC_a6c8f 
+CMakeFiles/cmTC_a6c8f.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a6c8f.dir/build.make:97: recipe for target 'cmTC_a6c8f' failed
+make[4]: *** [cmTC_a6c8f] Error 1
+make[4]: Leaving directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a6c8f/fast' failed
+make[3]: *** [cmTC_a6c8f/fast] Error 2
+make[3]: Leaving directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+
+File /home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_369e6/fast"
+make[3]: Entering directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_369e6.dir/build.make CMakeFiles/cmTC_369e6.dir/build
+make[4]: Entering directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_369e6.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_369e6.dir/CheckFunctionExists.cxx.o -c /home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_369e6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_369e6.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_369e6.dir/CheckFunctionExists.cxx.o  -o cmTC_369e6 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_369e6.dir/build.make:97: recipe for target 'cmTC_369e6' failed
+make[4]: *** [cmTC_369e6] Error 1
+make[4]: Leaving directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_369e6/fast' failed
+make[3]: *** [cmTC_369e6/fast] Error 2
+make[3]: Leaving directory '/home/marabir/catkin_ws/build/gflags_catkin/gflags_src-prefix/src/gflags_src/CMakeFiles/CMakeTmp'
+
+
